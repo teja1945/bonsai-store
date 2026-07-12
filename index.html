@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Bonsai Teja</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Inter', 'sans-serif']
-      }
-    }
-  }
+<style>
+body {
+  font-family: 'Inter', sans-serif;
 }
-</script>
+
+/* SCROLL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* PARALLAX */
+.parallax {
+  transform: translateY(0px);
+  transition: transform 0.1s linear;
+}
+</style>
 
 </head>
 
-<body class="bg-gray-950 text-white font-sans">
+<body class="bg-gray-950 text-white">
 
 <!-- BACKGROUND GLOW -->
 <div class="fixed inset-0 -z-10">
@@ -33,35 +46,30 @@ tailwind.config = {
 <!-- NAV -->
 <header class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
   <h1 class="font-semibold text-lg">Bonsai Teja</h1>
-  <a href="#" class="text-sm text-gray-300 hover:text-white">Contact</a>
 </header>
 
 <!-- HERO -->
 <section class="max-w-7xl mx-auto px-8 py-24 grid md:grid-cols-2 gap-16 items-center">
 
-  <div>
+  <div class="reveal">
     <h1 class="text-5xl font-bold leading-tight">
       Bonsai Estetik
-      <span class="text-green-400">Level Premium</span>
+      <span class="text-green-400">Modern UI</span>
     </h1>
 
     <p class="mt-5 text-gray-400">
-      Bukan sekadar tanaman. Ini elemen visual untuk ruang modern.
+      Experience dekorasi level baru dengan bonsai premium.
     </p>
 
     <div class="mt-8 flex gap-4">
-      <a href="#produk" class="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-xl text-sm font-semibold transition">
+      <a href="#produk" class="bg-green-500 px-6 py-3 rounded-xl text-sm font-semibold hover:scale-105 transition">
         Lihat Produk
-      </a>
-
-      <a href="#" class="border border-white/20 px-6 py-3 rounded-xl text-sm hover:bg-white/10 transition">
-        Konsultasi
       </a>
     </div>
   </div>
 
-  <!-- GLASS IMAGE -->
-  <div class="relative">
+  <!-- PARALLAX IMAGE -->
+  <div class="relative parallax">
     <div class="absolute inset-0 bg-white/10 backdrop-blur-2xl rounded-3xl"></div>
     <img src="images (1).jpeg"
          class="relative rounded-3xl w-full h-[420px] object-cover shadow-2xl"/>
@@ -72,12 +80,12 @@ tailwind.config = {
 <!-- PRODUK -->
 <section id="produk" class="max-w-7xl mx-auto px-8 py-20">
 
-  <h2 class="text-2xl font-semibold mb-10">Produk Pilihan</h2>
+  <h2 class="text-2xl font-semibold mb-10 reveal">Produk Pilihan</h2>
 
   <div class="grid md:grid-cols-3 gap-8">
 
     <!-- CARD -->
-    <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:scale-105 transition">
+    <div class="reveal bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:scale-105 hover:-translate-y-2 transition duration-300">
 
       <img src="images (1).jpeg" class="h-56 w-full object-cover"/>
 
@@ -93,7 +101,7 @@ tailwind.config = {
       </div>
     </div>
 
-    <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:scale-105 transition">
+    <div class="reveal bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:scale-105 hover:-translate-y-2 transition duration-300">
 
       <img src="79b71-evt_japanesefestival_jjmueller_8593.jpg" class="h-56 w-full object-cover"/>
 
@@ -113,45 +121,17 @@ tailwind.config = {
 
 </section>
 
-<!-- TRUST -->
-<section class="max-w-6xl mx-auto px-8 py-16">
-
-  <div class="grid md:grid-cols-3 gap-6 text-center">
-
-    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl">
-      <p class="font-semibold">✔ Bonsai Asli</p>
-      <p class="text-gray-400 text-sm mt-2">Dipilih langsung</p>
-    </div>
-
-    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl">
-      <p class="font-semibold">✔ Siap Rawat</p>
-      <p class="text-gray-400 text-sm mt-2">Cocok pemula</p>
-    </div>
-
-    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl">
-      <p class="font-semibold">✔ Fast Response</p>
-      <p class="text-gray-400 text-sm mt-2">Support WhatsApp</p>
-    </div>
-
-  </div>
-
-</section>
-
 <!-- CTA -->
-<section class="max-w-5xl mx-auto px-8 py-20 text-center">
+<section class="max-w-5xl mx-auto px-8 py-20 text-center reveal">
 
   <div class="bg-gradient-to-r from-green-500/20 to-green-700/20 backdrop-blur-2xl border border-white/10 p-10 rounded-3xl">
 
     <h2 class="text-2xl font-semibold">
-      Mulai Koleksi Bonsai Anda
+      Siap Upgrade Dekorasi Anda?
     </h2>
 
-    <p class="text-gray-400 mt-3">
-      Konsultasi langsung & pilih bonsai terbaik
-    </p>
-
     <a href="https://wa.me/6285722040811"
-       class="inline-block mt-6 bg-green-500 px-6 py-3 rounded-xl text-sm font-semibold hover:bg-green-600">
+       class="inline-block mt-6 bg-green-500 px-6 py-3 rounded-xl text-sm font-semibold hover:scale-105 transition">
        Chat WhatsApp
     </a>
 
@@ -159,5 +139,33 @@ tailwind.config = {
 
 </section>
 
+<!-- SCRIPT -->
+<script>
+/* SCROLL REVEAL */
+function reveal() {
+  let reveals = document.querySelectorAll(".reveal");
+
+  for (let i = 0; i < reveals.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let elementVisible = 100;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+
+
+/* PARALLAX */
+window.addEventListener("scroll", function() {
+  const parallax = document.querySelector(".parallax");
+  let offset = window.scrollY;
+  parallax.style.transform = "translateY(" + offset * 0.2 + "px)";
+});
+</script>
+
 </body>
-      </html>
+        </html>
