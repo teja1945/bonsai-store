@@ -8,83 +8,97 @@
     body {
       font-family: Arial;
       margin: 0;
-      background: #f5f5f5;
+      background: #eef2ef;
     }
 
     .hero {
-      background: linear-gradient(45deg, #2e4d34, #3d6b47);
+      background: url('images (1).jpeg') center/cover;
       color: white;
-      padding: 40px 20px;
+      padding: 80px 20px;
       text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .hero h1, .hero p {
+      position: relative;
+      z-index: 2;
     }
 
     .hero h1 {
+      font-size: 32px;
       margin: 0;
-      font-size: 28px;
     }
 
     .hero p {
-      margin-top: 10px;
       font-size: 14px;
-      opacity: 0.9;
+      margin-top: 10px;
     }
 
     .products {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      padding: 15px;
+      gap: 20px;
+      padding: 20px;
     }
 
     .product {
       background: white;
-      padding: 12px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      transition: 0.2s;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: 0.25s;
     }
 
     .product:hover {
-      transform: scale(1.03);
+      transform: translateY(-5px);
     }
 
     .product img {
       width: 100%;
-      border-radius: 10px;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .content {
+      padding: 12px;
     }
 
     .badge {
-      color: green;
-      font-size: 12px;
-      font-weight: bold;
-      margin-top: 5px;
+      background: #e6f4ea;
+      color: #28a745;
+      display: inline-block;
+      padding: 4px 8px;
+      font-size: 11px;
+      border-radius: 5px;
+      margin-bottom: 5px;
     }
 
     .product h3 {
-      margin: 8px 0 5px;
-      font-size: 16px;
+      margin: 5px 0;
+      font-size: 15px;
     }
 
     .price {
       font-weight: bold;
-      color: #333;
-    }
-
-    .desc {
-      font-size: 12px;
-      color: #666;
+      margin: 5px 0;
     }
 
     .btn {
       display: block;
-      background: linear-gradient(45deg, #28a745, #218838);
+      background: #28a745;
       color: white;
       padding: 10px;
       text-align: center;
       margin-top: 10px;
       text-decoration: none;
       border-radius: 8px;
-      font-weight: bold;
       font-size: 14px;
     }
 
@@ -98,7 +112,7 @@
       border-radius: 50px;
       text-decoration: none;
       font-size: 14px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
   </style>
@@ -108,27 +122,29 @@
 
 <div class="hero">
   <h1>Bonsai Teja</h1>
-  <p>Bonsai unik untuk hias rumah & meja kerja</p>
+  <p>Bonsai unik & estetik untuk dekorasi rumah</p>
 </div>
 
 <div class="products">
 
   <div class="product">
     <img src="images (1).jpeg">
-    <p class="badge">🔥 Ready Stock</p>
-    <h3>Bonsai Beringin Mini</h3>
-    <p class="price">Rp 75.000</p>
-    <p class="desc">Cocok untuk pemula, mudah dirawat</p>
-    <a class="btn" href="https://shopee.co.id/produk-kamu">Beli di Shopee</a>
+    <div class="content">
+      <span class="badge">Ready Stock</span>
+      <h3>Bonsai Beringin Mini</h3>
+      <p class="price">Rp 75.000</p>
+      <a class="btn" href="#">Beli Sekarang</a>
+    </div>
   </div>
 
   <div class="product">
     <img src="79b71-evt_japanesefestival_jjmueller_8593.jpg">
-    <p class="badge">🔥 Best Seller</p>
-    <h3>Bonsai Serut</h3>
-    <p class="price">Rp 120.000</p>
-    <p class="desc">Bentuk rapi, siap pajang</p>
-    <a class="btn" href="https://shopee.co.id/produk-kamu">Beli di Shopee</a>
+    <div class="content">
+      <span class="badge">Best Seller</span>
+      <h3>Bonsai Serut</h3>
+      <p class="price">Rp 120.000</p>
+      <a class="btn" href="#">Beli Sekarang</a>
+    </div>
   </div>
 
 </div>
@@ -138,4 +154,4 @@
 </a>
 
 </body>
-</html>
+  </html>
