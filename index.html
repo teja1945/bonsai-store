@@ -1,234 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bonsai Teja</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Bonsai Teja</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    body {
-      background: #f9fafb;
-      color: #111;
-    }
+<style>
+* {margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
 
-    /* NAVBAR */
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 15px 25px;
-      background: white;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+body {
+  background: #f5f7f6;
+  color: #111;
+}
 
-    .nav h2 {
-      font-size: 18px;
-    }
+/* NAV */
+.nav {
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+}
+.nav h2 {font-weight:600;}
+.nav a {text-decoration:none;color:#444;}
 
-    .nav a {
-      text-decoration: none;
-      color: #333;
-      font-size: 14px;
-    }
+/* HERO */
+.hero {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 40px;
+  max-width:1200px;
+  margin:auto;
+}
 
-    /* HERO */
-    .hero {
-      padding: 80px 20px;
-      text-align: center;
-      max-width: 800px;
-      margin: auto;
-    }
+.hero-text {
+  max-width:500px;
+}
 
-    .hero h1 {
-      font-size: 36px;
-      font-weight: 700;
-    }
+.hero-text h1 {
+  font-size:48px;
+  line-height:1.2;
+}
 
-    .hero p {
-      margin-top: 10px;
-      color: #555;
-    }
+.hero-text p {
+  margin:15px 0;
+  color:#555;
+}
 
-    .hero .btn {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 12px 20px;
-      background: #16a34a;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-    }
+.hero-text a {
+  display:inline-block;
+  background:#14532d;
+  color:#fff;
+  padding:14px 22px;
+  border-radius:10px;
+  text-decoration:none;
+}
 
-    /* GRID */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-      gap: 20px;
-      padding: 30px;
-      max-width: 1000px;
-      margin: auto;
-    }
+/* HERO IMAGE */
+.hero-img {
+  width:400px;
+  height:400px;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 30px 60px rgba(0,0,0,0.15);
+}
+.hero-img img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-    .card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      transition: 0.2s;
-      border: 1px solid #eee;
-    }
+/* SECTION */
+.section {
+  max-width:1200px;
+  margin:auto;
+  padding:60px 40px;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
 
-    .card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
+/* CARD */
+.card {
+  background:#fff;
+  border-radius:16px;
+  overflow:hidden;
+  transition:0.3s;
+}
 
-    .card-body {
-      padding: 15px;
-    }
+.card:hover {
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.1);
+}
 
-    .card-body h3 {
-      font-size: 15px;
-    }
+.card img {
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
 
-    .price {
-      margin: 8px 0;
-      font-weight: 600;
-    }
+.card-body {
+  padding:20px;
+}
 
-    .btn-buy {
-      display: block;
-      text-align: center;
-      background: #16a34a;
-      color: white;
-      padding: 10px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 14px;
-    }
+.card-body h3 {
+  font-size:16px;
+}
 
-    /* TRUST */
-    .trust {
-      padding: 40px 20px;
-      text-align: center;
-      background: #fff;
-    }
+.price {
+  margin:10px 0;
+  font-weight:600;
+}
 
-    .trust h2 {
-      margin-bottom: 15px;
-    }
+.btn {
+  display:block;
+  text-align:center;
+  background:#166534;
+  color:white;
+  padding:12px;
+  border-radius:10px;
+  text-decoration:none;
+}
 
-    .trust p {
-      color: #555;
-      margin: 5px 0;
-    }
+/* TRUST */
+.trust {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
 
-    /* TESTI */
-    .testi {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
+.trust div {
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  flex:1;
+  text-align:center;
+}
 
-    .testi h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+/* WA FLOAT */
+.wa {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:white;
+  padding:16px;
+  border-radius:50%;
+  text-decoration:none;
+}
+</style>
 
-    .review {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #eee;
-    }
-
-    /* WA */
-    .wa {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 14px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-    }
-
-  </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
   <h2>Bonsai Teja</h2>
-  <a href="#">Home</a>
+  <a href="#">Contact</a>
 </div>
 
-<!-- HERO -->
 <div class="hero">
-  <h1>Bonsai Estetik & Siap Rawat</h1>
-  <p>Cocok untuk dekorasi rumah dan meja kerja</p>
-  <a href="#produk" class="btn">Lihat Produk</a>
-</div>
+  <div class="hero-text">
+    <h1>Bonsai Premium untuk Ruang Elegan</h1>
+    <p>Dipilih langsung, siap rawat, cocok untuk dekorasi modern</p>
+    <a href="#produk">Lihat Produk</a>
+  </div>
 
-<!-- PRODUK -->
-<div class="products" id="produk">
-
-  <div class="card">
+  <div class="hero-img">
     <img src="images (1).jpeg">
-    <div class="card-body">
-      <h3>Bonsai Beringin Mini</h3>
-      <p class="price">Rp 75.000</p>
-      <a href="#" class="btn-buy">Beli</a>
-    </div>
   </div>
+</div>
 
-  <div class="card">
-    <img src="79b71-evt_japanesefestival_jjmueller_8593.jpg">
-    <div class="card-body">
-      <h3>Bonsai Serut</h3>
-      <p class="price">Rp 120.000</p>
-      <a href="#" class="btn-buy">Beli</a>
+<div class="section" id="produk">
+  <h2 style="margin-bottom:20px;">Produk Pilihan</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="images (1).jpeg">
+      <div class="card-body">
+        <h3>Bonsai Beringin</h3>
+        <p class="price">Rp 75.000</p>
+        <a href="#" class="btn">Beli</a>
+      </div>
     </div>
+
+    <div class="card">
+      <img src="79b71-evt_japanesefestival_jjmueller_8593.jpg">
+      <div class="card-body">
+        <h3>Bonsai Serut</h3>
+        <p class="price">Rp 120.000</p>
+        <a href="#" class="btn">Beli</a>
+      </div>
+    </div>
+
   </div>
-
 </div>
 
-<!-- TRUST -->
-<div class="trust">
-  <h2>Kenapa Pilih Kami?</h2>
-  <p>✔ Bonsai asli & siap rawat</p>
-  <p>✔ Kualitas dipilih langsung</p>
-  <p>✔ Bisa konsultasi via WhatsApp</p>
+<div class="section">
+  <div class="trust">
+    <div>✔ Bonsai asli</div>
+    <div>✔ Siap rawat</div>
+    <div>✔ Support WA</div>
+  </div>
 </div>
 
-<!-- TESTIMONI -->
-<div class="testi">
-  <h2>Testimoni</h2>
-  <div class="review">"Bagus banget, sesuai foto" - Andi</div>
-  <div class="review">"Cepat sampai & aman" - Rina</div>
-</div>
-
-<a href="https://wa.me/6285722040811" class="wa">Chat WA</a>
+<a href="https://wa.me/6285722040811" class="wa">WA</a>
 
 </body>
-    </html>
+</html>
