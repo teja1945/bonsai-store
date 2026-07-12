@@ -4,104 +4,109 @@
   <title>Bonsai Teja</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial;
       margin: 0;
-      background: #eef2ef;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6f5;
     }
 
+    /* HERO */
     .hero {
-      background: url('images (1).jpeg') center/cover;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('images (1).jpeg') center/cover;
       color: white;
-      padding: 80px 20px;
+      padding: 100px 20px;
       text-align: center;
-      position: relative;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      top:0; left:0; right:0; bottom:0;
-      background: rgba(0,0,0,0.5);
-    }
-
-    .hero h1, .hero p {
-      position: relative;
-      z-index: 2;
     }
 
     .hero h1 {
-      font-size: 32px;
       margin: 0;
+      font-size: 36px;
+      font-weight: 700;
     }
 
     .hero p {
-      font-size: 14px;
       margin-top: 10px;
+      font-size: 14px;
+      opacity: 0.9;
     }
 
+    /* PRODUCTS */
     .products {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
       padding: 20px;
+      max-width: 900px;
+      margin: auto;
     }
 
     .product {
       background: white;
-      border-radius: 15px;
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
       transition: 0.25s;
     }
 
     .product:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
     }
 
     .product img {
       width: 100%;
-      height: 140px;
+      height: 160px;
       object-fit: cover;
     }
 
     .content {
-      padding: 12px;
+      padding: 14px;
     }
 
     .badge {
-      background: #e6f4ea;
-      color: #28a745;
-      display: inline-block;
-      padding: 4px 8px;
+      background: #e8f5e9;
+      color: #2e7d32;
       font-size: 11px;
-      border-radius: 5px;
-      margin-bottom: 5px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 6px;
     }
 
     .product h3 {
       margin: 5px 0;
       font-size: 15px;
+      font-weight: 500;
     }
 
     .price {
-      font-weight: bold;
-      margin: 5px 0;
+      font-weight: 700;
+      margin: 6px 0;
+      color: #222;
     }
 
     .btn {
       display: block;
-      background: #28a745;
+      background: #2e7d32;
       color: white;
       padding: 10px;
       text-align: center;
       margin-top: 10px;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 14px;
+      font-weight: 500;
     }
 
+    /* WA BUTTON */
     .wa {
       position: fixed;
       bottom: 20px;
@@ -112,7 +117,7 @@
       border-radius: 50px;
       text-decoration: none;
       font-size: 14px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
     }
 
   </style>
@@ -122,7 +127,7 @@
 
 <div class="hero">
   <h1>Bonsai Teja</h1>
-  <p>Bonsai unik & estetik untuk dekorasi rumah</p>
+  <p>Bonsai estetik untuk dekorasi rumah & meja kerja</p>
 </div>
 
 <div class="products">
@@ -133,7 +138,7 @@
       <span class="badge">Ready Stock</span>
       <h3>Bonsai Beringin Mini</h3>
       <p class="price">Rp 75.000</p>
-      <a class="btn" href="#">Beli Sekarang</a>
+      <a class="btn" href="https://shopee.co.id/produk-kamu">Beli Sekarang</a>
     </div>
   </div>
 
@@ -143,7 +148,7 @@
       <span class="badge">Best Seller</span>
       <h3>Bonsai Serut</h3>
       <p class="price">Rp 120.000</p>
-      <a class="btn" href="#">Beli Sekarang</a>
+      <a class="btn" href="https://shopee.co.id/produk-kamu">Beli Sekarang</a>
     </div>
   </div>
 
@@ -154,4 +159,4 @@
 </a>
 
 </body>
-  </html>
+</html>
