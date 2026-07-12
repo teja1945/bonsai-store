@@ -15,28 +15,54 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #f4f6f5;
+      background: #f5f7f6;
     }
 
     /* HERO */
     .hero {
+      height: 100vh;
       background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                   url('images (1).jpeg') center/cover;
       color: white;
-      padding: 100px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      padding: 20px;
     }
 
     .hero h1 {
+      font-size: 42px;
       margin: 0;
-      font-size: 36px;
-      font-weight: 700;
     }
 
     .hero p {
       margin-top: 10px;
-      font-size: 14px;
+      font-size: 16px;
       opacity: 0.9;
+    }
+
+    .cta {
+      margin-top: 20px;
+      background: #28a745;
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 20px;
     }
 
     /* PRODUCTS */
@@ -44,9 +70,6 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
     }
 
     .product {
@@ -54,43 +77,36 @@
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: 0.25s;
+      transition: 0.3s;
     }
 
     .product:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
     }
 
     .product img {
       width: 100%;
-      height: 160px;
+      height: 180px;
       object-fit: cover;
     }
 
     .content {
-      padding: 14px;
+      padding: 15px;
     }
 
     .badge {
       background: #e8f5e9;
       color: #2e7d32;
-      font-size: 11px;
-      padding: 4px 8px;
+      font-size: 12px;
+      padding: 5px 10px;
       border-radius: 6px;
       display: inline-block;
-      margin-bottom: 6px;
-    }
-
-    .product h3 {
-      margin: 5px 0;
-      font-size: 15px;
-      font-weight: 500;
+      margin-bottom: 8px;
     }
 
     .price {
-      font-weight: 700;
-      margin: 6px 0;
-      color: #222;
+      font-weight: bold;
+      margin: 5px 0;
     }
 
     .btn {
@@ -99,14 +115,32 @@
       color: white;
       padding: 10px;
       text-align: center;
-      margin-top: 10px;
-      text-decoration: none;
       border-radius: 10px;
-      font-size: 14px;
-      font-weight: 500;
+      text-decoration: none;
+      margin-top: 10px;
     }
 
-    /* WA BUTTON */
+    /* TRUST */
+    .trust {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .trust p {
+      margin: 10px 0;
+    }
+
+    /* TESTIMONI */
+    .testi {
+      background: #fff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    /* WA */
     .wa {
       position: fixed;
       bottom: 20px;
@@ -125,38 +159,65 @@
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
   <h1>Bonsai Teja</h1>
-  <p>Bonsai estetik untuk dekorasi rumah & meja kerja</p>
+  <p>Bonsai estetik untuk rumah & meja kerja</p>
+  <a href="#produk" class="cta">Lihat Produk</a>
 </div>
 
-<div class="products">
+<!-- PRODUK -->
+<div class="section" id="produk">
+  <h2>Produk Kami</h2>
 
-  <div class="product">
-    <img src="images (1).jpeg">
-    <div class="content">
-      <span class="badge">Ready Stock</span>
-      <h3>Bonsai Beringin Mini</h3>
-      <p class="price">Rp 75.000</p>
-      <a class="btn" href="https://shopee.co.id/produk-kamu">Beli Sekarang</a>
+  <div class="products">
+
+    <div class="product">
+      <img src="images (1).jpeg">
+      <div class="content">
+        <span class="badge">Ready Stock</span>
+        <h3>Bonsai Beringin Mini</h3>
+        <p class="price">Rp 75.000</p>
+        <a class="btn" href="#">Beli Sekarang</a>
+      </div>
     </div>
-  </div>
 
-  <div class="product">
-    <img src="79b71-evt_japanesefestival_jjmueller_8593.jpg">
-    <div class="content">
-      <span class="badge">Best Seller</span>
-      <h3>Bonsai Serut</h3>
-      <p class="price">Rp 120.000</p>
-      <a class="btn" href="https://shopee.co.id/produk-kamu">Beli Sekarang</a>
+    <div class="product">
+      <img src="79b71-evt_japanesefestival_jjmueller_8593.jpg">
+      <div class="content">
+        <span class="badge">Best Seller</span>
+        <h3>Bonsai Serut</h3>
+        <p class="price">Rp 120.000</p>
+        <a class="btn" href="#">Beli Sekarang</a>
+      </div>
     </div>
-  </div>
 
+  </div>
 </div>
 
+<!-- TRUST -->
+<div class="section">
+  <div class="trust">
+    <h2>Kenapa Pilih Kami?</h2>
+    <p>✔ Bonsai asli & siap rawat</p>
+    <p>✔ Sudah dipilih & dirapikan</p>
+    <p>✔ Bisa konsultasi langsung</p>
+  </div>
+</div>
+
+<!-- TESTIMONI -->
+<div class="section">
+  <div class="testi">
+    <h2>Testimoni</h2>
+    <p>⭐ "Barang bagus & sesuai foto" - Andi</p>
+    <p>⭐ "Pengiriman cepat & aman" - Rina</p>
+  </div>
+</div>
+
+<!-- WA -->
 <a href="https://wa.me/6285722040811" class="wa">
   Chat WhatsApp
 </a>
 
 </body>
-</html>
+  </html>
