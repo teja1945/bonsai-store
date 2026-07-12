@@ -12,10 +12,21 @@
     }
 
     .hero {
-      background: #2e4d34;
+      background: linear-gradient(45deg, #2e4d34, #3d6b47);
       color: white;
-      padding: 30px;
+      padding: 40px 20px;
       text-align: center;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      font-size: 14px;
+      opacity: 0.9;
     }
 
     .products {
@@ -27,8 +38,14 @@
 
     .product {
       background: white;
-      padding: 10px;
-      border-radius: 10px;
+      padding: 12px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: 0.2s;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
     }
 
     .product img {
@@ -36,27 +53,54 @@
       border-radius: 10px;
     }
 
+    .badge {
+      color: green;
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .product h3 {
+      margin: 8px 0 5px;
+      font-size: 16px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .desc {
+      font-size: 12px;
+      color: #666;
+    }
+
     .btn {
       display: block;
-      background: green;
+      background: linear-gradient(45deg, #28a745, #218838);
       color: white;
       padding: 10px;
       text-align: center;
       margin-top: 10px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 14px;
     }
 
     .wa {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: green;
+      background: #25d366;
       color: white;
-      padding: 15px;
+      padding: 14px 18px;
       border-radius: 50px;
       text-decoration: none;
+      font-size: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
+
   </style>
 </head>
 
@@ -64,24 +108,26 @@
 
 <div class="hero">
   <h1>Bonsai Teja</h1>
-  <p>Bonsai Siap Bentuk & Mudah Dirawat</p>
+  <p>Bonsai unik untuk hias rumah & meja kerja</p>
 </div>
 
 <div class="products">
 
   <div class="product">
     <img src="images (1).jpeg">
+    <p class="badge">🔥 Ready Stock</p>
     <h3>Bonsai Beringin Mini</h3>
-    <p>Rp 75.000</p>
-    <p>Cocok untuk pemula</p>
+    <p class="price">Rp 75.000</p>
+    <p class="desc">Cocok untuk pemula, mudah dirawat</p>
     <a class="btn" href="https://shopee.co.id/produk-kamu">Beli di Shopee</a>
   </div>
 
   <div class="product">
     <img src="79b71-evt_japanesefestival_jjmueller_8593.jpg">
+    <p class="badge">🔥 Best Seller</p>
     <h3>Bonsai Serut</h3>
-    <p>Rp 120.000</p>
-    <p>Rapi & siap pajang</p>
+    <p class="price">Rp 120.000</p>
+    <p class="desc">Bentuk rapi, siap pajang</p>
     <a class="btn" href="https://shopee.co.id/produk-kamu">Beli di Shopee</a>
   </div>
 
@@ -92,4 +138,4 @@
 </a>
 
 </body>
-  </html>
+</html>
