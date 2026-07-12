@@ -3,28 +3,39 @@
 <head>
   <title>Bonsai Teja</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       font-family: Arial;
       margin: 0;
       background: #f5f5f5;
     }
+
     .hero {
       background: #2e4d34;
       color: white;
-      padding: 40px;
+      padding: 30px;
       text-align: center;
     }
+
+    .products {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      padding: 15px;
+    }
+
     .product {
       background: white;
-      margin: 15px;
-      padding: 15px;
+      padding: 10px;
       border-radius: 10px;
     }
-    img {
+
+    .product img {
       width: 100%;
       border-radius: 10px;
     }
+
     .btn {
       display: block;
       background: green;
@@ -35,6 +46,17 @@
       text-decoration: none;
       border-radius: 5px;
     }
+
+    .wa {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: green;
+      color: white;
+      padding: 15px;
+      border-radius: 50px;
+      text-decoration: none;
+    }
   </style>
 </head>
 
@@ -42,29 +64,32 @@
 
 <div class="hero">
   <h1>Bonsai Teja</h1>
-  <p>Bonsai Siap Bentuk & Siap Rawat</p>
+  <p>Bonsai Siap Bentuk & Mudah Dirawat</p>
 </div>
 
-<div class="product">
-  <img src="images (1).jpeg">
-  <h3>Bonsai Beringin Mini</h3>
-  <p>Rp 75.000</p>
-  <a class="btn" href="https://shopee.co.id/produk-kamu">Beli di Shopee</a>
+<div class="products">
+
+  <div class="product">
+    <img src="images (1).jpeg">
+    <h3>Bonsai Beringin Mini</h3>
+    <p>Rp 75.000</p>
+    <p>Cocok untuk pemula</p>
+    <a class="btn" href="https://shopee.co.id/produk-kamu">Beli di Shopee</a>
+  </div>
+
+  <div class="product">
+    <img src="79b71-evt_japanesefestival_jjmueller_8593.jpg">
+    <h3>Bonsai Serut</h3>
+    <p>Rp 120.000</p>
+    <p>Rapi & siap pajang</p>
+    <a class="btn" href="https://shopee.co.id/produk-kamu">Beli di Shopee</a>
+  </div>
+
 </div>
 
-<div class="product">
-  <img src="79b71-evt_japanesefestival_jjmueller_8593.jpg">
-  <h3>Bonsai Serut</h3>
-  <p>Rp 120.000</p>
-  
-  <a class="btn" href="https://shopee.co.id/produk-kamu">Beli di Shopee</a>
-</div>
-  <a href="https://wa.me/6285722040811" 
-     style="background: green; color: white; padding: 10px; text-decoration: none;">
-     Beli via WhatsApp
-  </a>
+<a href="https://wa.me/6285722040811" class="wa">
+  Chat WhatsApp
+</a>
 
 </body>
-</html>
-</body>
-</>
+  </html>
