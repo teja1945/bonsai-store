@@ -7,16 +7,15 @@
 <title>Bonsai Teja</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
 body { font-family: 'Inter', sans-serif; }
 
-/* ANIMATION */
+/* FADE */
 .fade {
   opacity: 0;
-  transform: translateY(60px);
+  transform: translateY(80px);
   transition: all 1s cubic-bezier(.2,.65,.3,1);
 }
 .fade.show {
@@ -26,43 +25,48 @@ body { font-family: 'Inter', sans-serif; }
 
 /* FLOAT */
 .float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 7s ease-in-out infinite;
 }
 @keyframes float {
   0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-25px); }
+  50% { transform: translateY(-30px); }
 }
 </style>
 </head>
 
 <body class="bg-black text-white overflow-x-hidden">
 
-<!-- BACKGROUND -->
+<!-- BACKGROUND GLOW -->
 <div class="fixed inset-0 -z-10">
-  <div class="absolute top-[-200px] left-1/2 w-[900px] h-[900px] bg-green-500/20 blur-[200px] rounded-full"></div>
+  <div class="absolute top-[-200px] left-[-100px] w-[700px] h-[700px] bg-green-500/20 blur-[180px] rounded-full"></div>
+  <div class="absolute bottom-[-200px] right-[-100px] w-[700px] h-[700px] bg-white/10 blur-[200px] rounded-full"></div>
 </div>
 
 <!-- NAV -->
 <header class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
-  <h1 class="font-semibold text-lg tracking-wide">Bonsai Teja</h1>
-  <a href="https://wa.me/6285722040811" class="text-sm text-gray-400 hover:text-white">
+  <h1 class="font-semibold tracking-wide">Bonsai Teja</h1>
+  <a href="https://wa.me/6285722040811" class="text-gray-400 text-sm hover:text-white">
     WhatsApp
   </a>
 </header>
 
-<!-- HERO -->
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+<!-- HERO (DISRUPT) -->
+<section class="min-h-screen flex items-center justify-center text-center px-6 relative">
 
-  <div class="max-w-3xl fade">
+  <div class="fade max-w-4xl">
+
+    <p class="text-xs tracking-[0.3em] text-gray-500 mb-6">
+      NOT FOR EVERYONE
+    </p>
 
     <h1 class="text-6xl md:text-7xl font-extrabold leading-tight">
-      Bawa Ketenangan
+      Gak Semua Orang
       <br>
-      ke Dalam Ruangan
+      Cocok Punya Bonsai Ini
     </h1>
 
-    <p class="text-gray-400 mt-6 text-lg">
-      Bonsai bukan sekadar dekorasi. Ini cara sederhana buat bikin ruang terasa hidup & lebih bernilai.
+    <p class="text-gray-400 mt-6 text-lg max-w-xl mx-auto">
+      Ini bukan dekorasi biasa. Ini pilihan buat orang yang ngerti rasa ruang dan detail kecil.
     </p>
 
     <div class="mt-10 flex justify-center gap-4">
@@ -78,22 +82,25 @@ body { font-family: 'Inter', sans-serif; }
 
 </section>
 
-<!-- FLOAT IMAGE -->
-<section class="flex justify-center -mt-32 mb-40">
+<!-- FLOAT IMAGE (CENTERPIECE) -->
+<section class="flex justify-center -mt-32 mb-40 relative">
+
+  <div class="absolute top-10 left-10 w-40 h-40 bg-green-400/20 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-10 right-10 w-60 h-60 bg-white/10 blur-3xl rounded-full"></div>
+
   <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
-       class="w-[420px] md:w-[520px] rounded-3xl shadow-2xl float"/>
+       class="w-[420px] md:w-[520px] rounded-3xl shadow-[0_40px_120px_rgba(0,0,0,0.8)] float"/>
 </section>
 
-<!-- STORY SECTION -->
-<section class="py-40 text-center max-w-3xl mx-auto px-6 fade">
+<!-- STATEMENT -->
+<section class="py-40 text-center max-w-2xl mx-auto px-6 fade">
 
   <h2 class="text-4xl font-bold">
-    Setiap Bonsai Punya Karakter
+    Ini Bukan Produk Massal
   </h2>
 
   <p class="text-gray-400 mt-6 leading-relaxed">
-    Tidak ada yang benar-benar sama. Setiap bentuk, lekukan, dan arah tumbuh punya cerita sendiri.
-    Itu yang bikin setiap bonsai terasa personal.
+    Setiap bonsai dipilih, bukan diproduksi. Bentuknya tidak bisa diulang, dan tidak selalu tersedia.
   </p>
 
 </section>
@@ -107,87 +114,65 @@ body { font-family: 'Inter', sans-serif; }
   </div>
 
   <div class="fade">
-    <h2 class="text-3xl font-semibold">Kenapa Bonsai?</h2>
+    <h2 class="text-3xl font-semibold">Kenapa Dipilih, Bukan Dibeli Sembarangan</h2>
 
     <p class="text-gray-400 mt-4">
-      Bonsai membawa rasa tenang, fokus, dan hidup ke dalam ruangan lo tanpa effort berlebihan.
+      Banyak bonsai di luar sana. Tapi sedikit yang punya bentuk dan karakter yang benar-benar layak masuk ke ruang lo.
     </p>
 
     <ul class="mt-6 text-gray-300 space-y-2">
-      <li>✔ Mudah dirawat</li>
-      <li>✔ Cocok untuk ruang kecil</li>
-      <li>✔ Estetik & timeless</li>
+      <li>✔ Sudah diseleksi</li>
+      <li>✔ Bukan stok massal</li>
+      <li>✔ Setiap bentuk unik</li>
     </ul>
   </div>
 
 </section>
 
-<!-- PRODUK FOKUS -->
+<!-- PRODUK (GALERI STYLE) -->
 <section id="produk" class="py-40 text-center max-w-5xl mx-auto px-6">
 
-  <div class="fade">
-    <h2 class="text-4xl font-bold mb-16">Produk Pilihan</h2>
-  </div>
+  <p class="text-xs text-gray-500 tracking-widest">SELECTED PIECE</p>
 
-  <div class="fade">
-
-    <img src="https://images.unsplash.com/photo-1470165519883-0b3d1c38c0a6"
-         class="mx-auto w-[350px] rounded-3xl shadow-2xl hover:scale-105 transition duration-700"/>
-
-    <h3 class="text-2xl mt-8">Bonsai Serut Premium</h3>
-
-    <p class="text-gray-400 mt-3">
-      Bentuk alami yang tidak bisa dibuat ulang. Setiap unit unik.
-    </p>
-
-    <p class="text-green-400 text-2xl mt-6 font-bold">Rp 120.000</p>
-
-    <a href="https://wa.me/6285722040811"
-       class="inline-block mt-6 bg-green-500 px-8 py-4 rounded-xl font-semibold hover:scale-110 transition">
-      Beli Sekarang
-    </a>
-
-  </div>
-
-</section>
-
-<!-- TRUST -->
-<section class="max-w-6xl mx-auto px-6 pb-32">
-
-  <div class="grid md:grid-cols-3 gap-6 text-center">
-
-    <div class="fade bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl">
-      <p class="font-semibold">Pengiriman Aman</p>
-      <p class="text-gray-400 text-sm mt-2">Packing khusus</p>
-    </div>
-
-    <div class="fade bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl">
-      <p class="font-semibold">Kualitas Terpilih</p>
-      <p class="text-gray-400 text-sm mt-2">Bukan random</p>
-    </div>
-
-    <div class="fade bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl">
-      <p class="font-semibold">Fast Response</p>
-      <p class="text-gray-400 text-sm mt-2">Langsung WA</p>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- CTA -->
-<section class="text-center pb-40 fade">
-
-  <h2 class="text-3xl font-bold">
-    Mau Bonsai yang Cocok Buat Lo?
+  <h2 class="text-4xl font-bold mt-4">
+    Bonsai Serut — No. 021
   </h2>
 
-  <p class="text-gray-400 mt-4">
-    Konsultasi gratis. Kita bantu pilih sesuai ruang & budget.
+  <img src="https://images.unsplash.com/photo-1470165519883-0b3d1c38c0a6"
+       class="mx-auto mt-12 w-[380px] rounded-3xl shadow-[0_30px_100px_rgba(0,0,0,0.8)] hover:scale-105 transition duration-700"/>
+
+  <p class="text-gray-400 mt-8 max-w-xl mx-auto">
+    Dipilih dari ratusan bentuk. Bukan hasil produksi, tapi hasil seleksi.
+  </p>
+
+  <p class="text-green-400 text-2xl mt-6 font-bold">Rp 120.000</p>
+
+  <p class="text-xs text-gray-500 mt-3">
+    Stok terbatas. Tidak selalu tersedia.
   </p>
 
   <a href="https://wa.me/6285722040811"
      class="inline-block mt-8 bg-green-500 px-10 py-4 rounded-xl font-semibold hover:scale-110 transition">
+     Amankan Sekarang
+  </a>
+
+</section>
+
+<!-- FINAL CTA -->
+<section class="text-center pb-40 fade">
+
+  <h2 class="text-3xl font-bold">
+    Kalau Lo Ngerasa Ini Cocok,
+    <br>
+    Jangan Tunggu Lama
+  </h2>
+
+  <p class="text-gray-400 mt-4">
+    Karena kemungkinan besar, bentuk yang sama gak akan ada lagi.
+  </p>
+
+  <a href="https://wa.me/6285722040811"
+     class="inline-block mt-8 border border-white/20 px-10 py-4 rounded-xl hover:bg-white/10 transition">
      Chat Sekarang
   </a>
 
@@ -206,4 +191,4 @@ window.addEventListener("load", show);
 </script>
 
 </body>
-  </html>
+    </html>
