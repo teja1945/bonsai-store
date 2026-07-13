@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bonsai Premium</title>
+<title>Bonsai Teja</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
@@ -13,13 +13,13 @@
 <style>
 body { font-family: 'Inter', sans-serif; }
 
-/* SMOOTH FADE */
-.fade-up {
+/* ANIMATION */
+.fade {
   opacity: 0;
   transform: translateY(60px);
   transition: all 1s cubic-bezier(.2,.65,.3,1);
 }
-.fade-up.show {
+.fade.show {
   opacity: 1;
   transform: translateY(0);
 }
@@ -30,39 +30,47 @@ body { font-family: 'Inter', sans-serif; }
 }
 @keyframes float {
   0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-25px); }
 }
 </style>
-
 </head>
 
 <body class="bg-black text-white overflow-x-hidden">
 
-<!-- GLOW BACKGROUND -->
+<!-- BACKGROUND -->
 <div class="fixed inset-0 -z-10">
-  <div class="absolute top-[-200px] left-1/2 w-[800px] h-[800px] bg-green-500/20 blur-[180px] rounded-full"></div>
+  <div class="absolute top-[-200px] left-1/2 w-[900px] h-[900px] bg-green-500/20 blur-[200px] rounded-full"></div>
 </div>
 
-<!-- HERO -->
-<section class="min-h-screen flex items-center justify-center relative px-6">
+<!-- NAV -->
+<header class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+  <h1 class="font-semibold text-lg tracking-wide">Bonsai Teja</h1>
+  <a href="https://wa.me/6285722040811" class="text-sm text-gray-400 hover:text-white">
+    WhatsApp
+  </a>
+</header>
 
-  <div class="text-center max-w-4xl fade-up">
+<!-- HERO -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+
+  <div class="max-w-3xl fade">
 
     <h1 class="text-6xl md:text-7xl font-extrabold leading-tight">
-      Bonsai yang
-      <span class="text-green-400">Bikin Ruangan Naik Level</span>
+      Bawa Ketenangan
+      <br>
+      ke Dalam Ruangan
     </h1>
 
     <p class="text-gray-400 mt-6 text-lg">
-      Bukan tanaman biasa. Ini statement visual untuk meja & ruang hidup lo.
+      Bonsai bukan sekadar dekorasi. Ini cara sederhana buat bikin ruang terasa hidup & lebih bernilai.
     </p>
 
     <div class="mt-10 flex justify-center gap-4">
       <a href="#produk" class="bg-green-500 px-8 py-4 rounded-xl font-semibold hover:scale-110 transition">
-        Lihat Produk
+        Lihat Koleksi
       </a>
       <a href="https://wa.me/6285722040811" class="border border-white/20 px-8 py-4 rounded-xl hover:bg-white/10">
-        Chat
+        Konsultasi
       </a>
     </div>
 
@@ -70,61 +78,97 @@ body { font-family: 'Inter', sans-serif; }
 
 </section>
 
-<!-- SHOWCASE IMAGE FLOAT -->
-<section class="relative flex justify-center -mt-32 mb-32">
+<!-- FLOAT IMAGE -->
+<section class="flex justify-center -mt-32 mb-40">
   <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
-       class="w-[400px] md:w-[500px] rounded-3xl shadow-2xl float"/>
+       class="w-[420px] md:w-[520px] rounded-3xl shadow-2xl float"/>
 </section>
 
-<!-- FEATURE SPLIT -->
-<section class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+<!-- STORY SECTION -->
+<section class="py-40 text-center max-w-3xl mx-auto px-6 fade">
 
-  <div class="fade-up">
-    <h2 class="text-4xl font-bold">
-      Bukan Sekadar Tanaman
-    </h2>
+  <h2 class="text-4xl font-bold">
+    Setiap Bonsai Punya Karakter
+  </h2>
 
-    <p class="text-gray-400 mt-4">
-      Bonsai yang dipilih bukan cuma dari bentuk, tapi dari karakter.
-      Cocok buat lo yang pengen ruang lebih hidup tanpa ribet.
-    </p>
+  <p class="text-gray-400 mt-6 leading-relaxed">
+    Tidak ada yang benar-benar sama. Setiap bentuk, lekukan, dan arah tumbuh punya cerita sendiri.
+    Itu yang bikin setiap bonsai terasa personal.
+  </p>
+
+</section>
+
+<!-- FEATURE -->
+<section class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center py-32">
+
+  <div class="fade">
+    <img src="https://images.unsplash.com/photo-1470165519883-0b3d1c38c0a6"
+         class="rounded-3xl shadow-xl hover:scale-105 transition duration-700"/>
   </div>
 
-  <div class="fade-up">
-    <div class="bg-white/5 backdrop-blur-2xl p-10 rounded-3xl border border-white/10">
-      <p>✔ Sudah dibentuk</p>
-      <p class="mt-2">✔ Mudah dirawat</p>
-      <p class="mt-2">✔ Cocok pemula</p>
-    </div>
+  <div class="fade">
+    <h2 class="text-3xl font-semibold">Kenapa Bonsai?</h2>
+
+    <p class="text-gray-400 mt-4">
+      Bonsai membawa rasa tenang, fokus, dan hidup ke dalam ruangan lo tanpa effort berlebihan.
+    </p>
+
+    <ul class="mt-6 text-gray-300 space-y-2">
+      <li>✔ Mudah dirawat</li>
+      <li>✔ Cocok untuk ruang kecil</li>
+      <li>✔ Estetik & timeless</li>
+    </ul>
   </div>
 
 </section>
 
 <!-- PRODUK FOKUS -->
-<section id="produk" class="max-w-6xl mx-auto px-6 py-32">
+<section id="produk" class="py-40 text-center max-w-5xl mx-auto px-6">
 
-  <div class="fade-up text-center mb-16">
-    <h2 class="text-4xl font-bold">Produk Unggulan</h2>
+  <div class="fade">
+    <h2 class="text-4xl font-bold mb-16">Produk Pilihan</h2>
   </div>
 
-  <div class="grid md:grid-cols-2 gap-16 items-center">
+  <div class="fade">
 
     <img src="https://images.unsplash.com/photo-1470165519883-0b3d1c38c0a6"
-         class="rounded-3xl hover:scale-105 transition duration-700"/>
+         class="mx-auto w-[350px] rounded-3xl shadow-2xl hover:scale-105 transition duration-700"/>
 
-    <div>
-      <h3 class="text-3xl font-semibold">Bonsai Serut Premium</h3>
+    <h3 class="text-2xl mt-8">Bonsai Serut Premium</h3>
 
-      <p class="text-gray-400 mt-4">
-        Bentuk batang unik, cocok jadi centerpiece meja kerja.
-      </p>
+    <p class="text-gray-400 mt-3">
+      Bentuk alami yang tidak bisa dibuat ulang. Setiap unit unik.
+    </p>
 
-      <p class="text-3xl text-green-400 mt-6 font-bold">Rp 120.000</p>
+    <p class="text-green-400 text-2xl mt-6 font-bold">Rp 120.000</p>
 
-      <a href="https://wa.me/6285722040811"
-         class="inline-block mt-6 bg-green-500 px-8 py-4 rounded-xl font-semibold hover:scale-110 transition">
-        Beli Sekarang
-      </a>
+    <a href="https://wa.me/6285722040811"
+       class="inline-block mt-6 bg-green-500 px-8 py-4 rounded-xl font-semibold hover:scale-110 transition">
+      Beli Sekarang
+    </a>
+
+  </div>
+
+</section>
+
+<!-- TRUST -->
+<section class="max-w-6xl mx-auto px-6 pb-32">
+
+  <div class="grid md:grid-cols-3 gap-6 text-center">
+
+    <div class="fade bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl">
+      <p class="font-semibold">Pengiriman Aman</p>
+      <p class="text-gray-400 text-sm mt-2">Packing khusus</p>
+    </div>
+
+    <div class="fade bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl">
+      <p class="font-semibold">Kualitas Terpilih</p>
+      <p class="text-gray-400 text-sm mt-2">Bukan random</p>
+    </div>
+
+    <div class="fade bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl">
+      <p class="font-semibold">Fast Response</p>
+      <p class="text-gray-400 text-sm mt-2">Langsung WA</p>
     </div>
 
   </div>
@@ -132,22 +176,26 @@ body { font-family: 'Inter', sans-serif; }
 </section>
 
 <!-- CTA -->
-<section class="text-center pb-32 fade-up">
+<section class="text-center pb-40 fade">
 
   <h2 class="text-3xl font-bold">
-    Mau yang cocok buat ruangan lo?
+    Mau Bonsai yang Cocok Buat Lo?
   </h2>
+
+  <p class="text-gray-400 mt-4">
+    Konsultasi gratis. Kita bantu pilih sesuai ruang & budget.
+  </p>
 
   <a href="https://wa.me/6285722040811"
      class="inline-block mt-8 bg-green-500 px-10 py-4 rounded-xl font-semibold hover:scale-110 transition">
-     Konsultasi Sekarang
+     Chat Sekarang
   </a>
 
 </section>
 
 <script>
 function show() {
-  document.querySelectorAll(".fade-up").forEach(el => {
+  document.querySelectorAll(".fade").forEach(el => {
     if (el.getBoundingClientRect().top < window.innerHeight - 100) {
       el.classList.add("show");
     }
