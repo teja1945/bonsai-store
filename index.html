@@ -7,19 +7,19 @@
 <title>Bonsai Teja</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 body {
   font-family: 'Inter', sans-serif;
-  background: #0b0b0b;
+  background: #0a0a0a;
 }
 
-/* slow fade */
+/* reveal */
 .reveal {
   opacity: 0;
-  transform: translateY(50px);
-  transition: all 1.4s ease;
+  transform: translateY(40px);
+  transition: all 1s cubic-bezier(.2,.6,.2,1);
 }
 .reveal.show {
   opacity: 1;
@@ -27,96 +27,122 @@ body {
 }
 
 /* smooth hover */
-.soft {
-  transition: all 0.6s cubic-bezier(.2,.6,.2,1);
+.smooth {
+  transition: all .6s cubic-bezier(.2,.6,.2,1);
+}
+
+/* subtle parallax */
+.parallax {
+  transform: translateY(0px);
 }
 </style>
 </head>
 
-<body class="text-white">
+<body class="text-white overflow-x-hidden">
 
-<!-- NAV MINIMAL -->
+<!-- NAV -->
 <header class="fixed top-0 w-full z-50 flex justify-between px-8 py-6 bg-black/30 backdrop-blur-xl">
-  <div class="text-xs tracking-[0.3em] text-gray-400">BONSAI TEJA</div>
-  <a href="https://wa.me/6285722040811" class="text-xs text-gray-500 hover:text-white">
+  <div class="text-xs tracking-[0.3em] text-gray-500">BONSAI TEJA</div>
+  <a href="https://wa.me/6285722040811" class="text-xs text-gray-500 hover:text-white smooth">
     CONTACT
   </a>
 </header>
 
-<!-- HERO (SUPER QUIET) -->
+<!-- HERO -->
 <section class="h-screen flex items-center justify-center text-center px-6">
 
-  <div class="max-w-2xl reveal">
+  <div class="max-w-3xl reveal">
 
-    <h1 class="text-5xl md:text-6xl font-light leading-tight">
-      Pelan Sedikit.
+    <h1 class="text-5xl md:text-6xl font-medium leading-tight">
+      Bonsai yang Layak
       <br>
-      Lihat Lebih Dekat.
+      Masuk Ruang Lo
     </h1>
 
-    <p class="text-gray-500 mt-6">
-      Kadang yang lo cari bukan barang baru,
-      tapi rasa tenang yang hilang.
+    <p class="text-gray-500 mt-5 max-w-xl mx-auto">
+      Dipilih dengan standar. Bukan sekadar dikumpulkan.
     </p>
+
+    <a href="#produk"
+       class="inline-block mt-10 text-sm tracking-widest border-b border-white/20 pb-1 hover:border-white smooth">
+       VIEW
+    </a>
 
   </div>
 
 </section>
 
-<!-- IMAGE FOCUS -->
-<section class="py-40 flex justify-center">
-  <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
-       class="w-[300px] md:w-[420px] rounded-xl soft hover:scale-105"/>
+<!-- IMAGE HERO -->
+<section class="flex justify-center py-32">
+  <img id="parallaxImg"
+       src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
+       class="w-[340px] md:w-[420px] rounded-2xl shadow-[0_30px_120px_rgba(0,0,0,0.9)] smooth"/>
 </section>
 
-<!-- IMMERSIVE TEXT -->
-<section class="max-w-xl mx-auto text-center px-6 py-40 reveal">
+<!-- STATEMENT -->
+<section class="max-w-2xl mx-auto text-center px-6 py-32 reveal">
 
-  <p class="text-gray-400 leading-relaxed">
-    Bonsai bukan tentang punya banyak.
-    Tapi tentang punya satu yang tepat.
+  <p class="text-sm tracking-widest text-gray-600 mb-6">
+    CURATED OBJECT
+  </p>
+
+  <h2 class="text-3xl font-medium leading-snug">
+    Tidak Banyak.
+    <br>
+    Tapi Tepat.
+  </h2>
+
+  <p class="text-gray-500 mt-6">
+    Setiap bentuk punya karakter. Itu yang dipilih, bukan jumlahnya.
   </p>
 
 </section>
 
-<!-- PRODUCT (NO HARD SELL) -->
+<!-- PRODUCT -->
 <section id="produk" class="py-40 text-center reveal">
 
-  <img src="https://images.unsplash.com/photo-1470165519883-0b3d1c38c0a6"
-       class="mx-auto w-[280px] md:w-[360px] rounded-xl soft hover:scale-105"/>
-
-  <h3 class="text-xl mt-8 font-medium">
-    Serut No. 021
+  <h3 class="text-2xl font-medium">
+    Serut — 021
   </h3>
 
-  <p class="text-gray-500 mt-3 text-sm">
-    Tidak selalu ada.
+  <p class="text-gray-500 mt-2 text-sm">
+    Salah satu yang lolos seleksi.
   </p>
 
-  <p class="mt-4">Rp 120.000</p>
+  <img src="https://images.unsplash.com/photo-1470165519883-0b3d1c38c0a6"
+       class="mx-auto mt-12 w-[300px] md:w-[360px] rounded-xl smooth hover:scale-105"/>
+
+  <p class="mt-6 text-lg">Rp 120.000</p>
 
   <a href="https://wa.me/6285722040811"
-     class="inline-block mt-8 text-sm border-b border-white/20 pb-1 hover:border-white">
-     Ambil Kalau Masih Ada
+     class="inline-block mt-8 px-8 py-3 border border-white/20 text-sm tracking-widest hover:bg-white hover:text-black smooth">
+     RESERVE
+  </a>
+
+  <p class="text-xs text-gray-600 mt-4">
+    Tidak selalu tersedia
+  </p>
+
+</section>
+
+<!-- CLOSING -->
+<section class="text-center py-40 reveal">
+
+  <h2 class="text-2xl font-medium">
+    Kalau Ini Terasa Pas,
+    <br>
+    Biasanya Memang Itu.
+  </h2>
+
+  <a href="https://wa.me/6285722040811"
+     class="inline-block mt-10 text-sm tracking-widest border-b border-white/20 pb-1 hover:border-white smooth">
+     CONTACT
   </a>
 
 </section>
 
-<!-- LOOP SECTION (BIKIN BALIK LAGI) -->
-<section class="text-center py-40 reveal">
-
-  <h2 class="text-2xl font-light">
-    Gak semua orang akan ngerti.
-  </h2>
-
-  <p class="text-gray-500 mt-4">
-    Tapi biasanya yang ngerti…
-    akan balik lagi.
-  </p>
-
-</section>
-
 <script>
+// reveal
 function reveal() {
   document.querySelectorAll(".reveal").forEach(el => {
     if (el.getBoundingClientRect().top < window.innerHeight - 100) {
@@ -126,7 +152,14 @@ function reveal() {
 }
 window.addEventListener("scroll", reveal);
 window.addEventListener("load", reveal);
+
+// parallax subtle
+window.addEventListener("scroll", () => {
+  const img = document.getElementById("parallaxImg");
+  let offset = window.scrollY * 0.15;
+  img.style.transform = `translateY(${offset}px)`;
+});
 </script>
 
 </body>
-    </html>
+</html>
