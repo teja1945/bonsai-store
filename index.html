@@ -7,131 +7,112 @@
 <title>Bonsai Teja</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 body {
   font-family: 'Inter', sans-serif;
-  background: #0a0a0a;
+  background: #0b0b0b;
 }
 
-/* subtle fade */
+/* slow fade */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
+  transform: translateY(50px);
+  transition: all 1.4s ease;
 }
 .reveal.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* ultra smooth hover */
-.hover-soft {
-  transition: all .5s cubic-bezier(.2,.6,.2,1);
+/* smooth hover */
+.soft {
+  transition: all 0.6s cubic-bezier(.2,.6,.2,1);
 }
 </style>
 </head>
 
-<body class="text-white overflow-x-hidden">
+<body class="text-white">
 
-<!-- NAV -->
-<header class="max-w-6xl mx-auto flex justify-between items-center px-6 py-6">
-  <div class="text-sm tracking-widest text-gray-400">BONSAI TEJA</div>
-  <a href="https://wa.me/6285722040811" class="text-sm text-gray-500 hover:text-white transition">
+<!-- NAV MINIMAL -->
+<header class="fixed top-0 w-full z-50 flex justify-between px-8 py-6 bg-black/30 backdrop-blur-xl">
+  <div class="text-xs tracking-[0.3em] text-gray-400">BONSAI TEJA</div>
+  <a href="https://wa.me/6285722040811" class="text-xs text-gray-500 hover:text-white">
     CONTACT
   </a>
 </header>
 
-<!-- HERO -->
-<section class="min-h-screen flex items-center justify-center text-center px-6">
+<!-- HERO (SUPER QUIET) -->
+<section class="h-screen flex items-center justify-center text-center px-6">
 
-  <div class="max-w-3xl reveal">
+  <div class="max-w-2xl reveal">
 
-    <h1 class="text-5xl md:text-7xl font-semibold leading-tight">
-      Quiet Objects
+    <h1 class="text-5xl md:text-6xl font-light leading-tight">
+      Pelan Sedikit.
       <br>
-      That Change a Room
+      Lihat Lebih Dekat.
     </h1>
 
-    <p class="text-gray-500 mt-6 text-lg max-w-xl mx-auto leading-relaxed">
-      Bukan semua orang butuh bonsai. Tapi yang ngerti, langsung tahu kenapa ini beda.
+    <p class="text-gray-500 mt-6">
+      Kadang yang lo cari bukan barang baru,
+      tapi rasa tenang yang hilang.
     </p>
-
-    <a href="#produk"
-       class="inline-block mt-12 text-sm tracking-widest border-b border-white/30 pb-1 hover-soft hover:border-white">
-       VIEW COLLECTION
-    </a>
 
   </div>
 
 </section>
 
-<!-- IMAGE CENTER -->
-<section class="flex justify-center py-32">
+<!-- IMAGE FOCUS -->
+<section class="py-40 flex justify-center">
   <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
-       class="w-[320px] md:w-[420px] rounded-2xl shadow-[0_30px_100px_rgba(0,0,0,0.8)] hover-soft hover:scale-105"/>
+       class="w-[300px] md:w-[420px] rounded-xl soft hover:scale-105"/>
 </section>
 
-<!-- STATEMENT -->
-<section class="max-w-2xl mx-auto text-center px-6 py-40 reveal">
+<!-- IMMERSIVE TEXT -->
+<section class="max-w-xl mx-auto text-center px-6 py-40 reveal">
 
-  <p class="text-sm text-gray-500 tracking-widest mb-6">
-    SELECTED, NOT PRODUCED
-  </p>
-
-  <h2 class="text-3xl md:text-4xl font-semibold leading-snug">
-    Setiap Bonsai Dipilih.
-    <br>
-    Bukan Dibuat Ulang.
-  </h2>
-
-  <p class="text-gray-500 mt-6 leading-relaxed">
-    Tidak ada bentuk yang benar-benar sama. Itu yang bikin setiap pilihan terasa lebih personal.
+  <p class="text-gray-400 leading-relaxed">
+    Bonsai bukan tentang punya banyak.
+    Tapi tentang punya satu yang tepat.
   </p>
 
 </section>
 
-<!-- PRODUCT -->
-<section id="produk" class="max-w-4xl mx-auto px-6 py-40 text-center reveal">
-
-  <p class="text-xs text-gray-600 tracking-widest">PIECE 021</p>
-
-  <h3 class="text-3xl font-semibold mt-4">
-    Bonsai Serut
-  </h3>
+<!-- PRODUCT (NO HARD SELL) -->
+<section id="produk" class="py-40 text-center reveal">
 
   <img src="https://images.unsplash.com/photo-1470165519883-0b3d1c38c0a6"
-       class="mx-auto mt-12 w-[300px] md:w-[380px] rounded-2xl hover-soft hover:scale-105"/>
+       class="mx-auto w-[280px] md:w-[360px] rounded-xl soft hover:scale-105"/>
 
-  <p class="text-gray-500 mt-8 max-w-md mx-auto">
-    Bentuk alami dengan karakter kuat. Tidak ada versi kedua.
+  <h3 class="text-xl mt-8 font-medium">
+    Serut No. 021
+  </h3>
+
+  <p class="text-gray-500 mt-3 text-sm">
+    Tidak selalu ada.
   </p>
 
-  <p class="text-xl mt-6">Rp 120.000</p>
+  <p class="mt-4">Rp 120.000</p>
 
   <a href="https://wa.me/6285722040811"
-     class="inline-block mt-10 px-8 py-3 border border-white/20 text-sm tracking-widest hover:bg-white hover:text-black transition">
-     RESERVE
+     class="inline-block mt-8 text-sm border-b border-white/20 pb-1 hover:border-white">
+     Ambil Kalau Masih Ada
   </a>
-
-  <p class="text-xs text-gray-600 mt-4">
-    Tidak selalu tersedia
-  </p>
 
 </section>
 
-<!-- FINAL -->
-<section class="text-center pb-40 reveal">
+<!-- LOOP SECTION (BIKIN BALIK LAGI) -->
+<section class="text-center py-40 reveal">
 
-  <h2 class="text-2xl font-semibold">
-    Kalau Lo Ragu, Biasanya Itu Bukan Buat Lo
+  <h2 class="text-2xl font-light">
+    Gak semua orang akan ngerti.
   </h2>
 
-  <a href="https://wa.me/6285722040811"
-     class="inline-block mt-10 text-sm tracking-widest border-b border-white/30 pb-1 hover:border-white transition">
-     TALK ON WHATSAPP
-  </a>
+  <p class="text-gray-500 mt-4">
+    Tapi biasanya yang ngerti…
+    akan balik lagi.
+  </p>
 
 </section>
 
@@ -148,4 +129,4 @@ window.addEventListener("load", reveal);
 </script>
 
 </body>
-  </html>
+    </html>
